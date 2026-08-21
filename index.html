@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .content {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple App</h1>
+    <div class="content">
+        <p>Welcome to this simple HTML application!</p>
+        <button id="actionButton">Click Me</button>
+        <p id="output"></p>
+    </div>
+    
+    <script>
+        document.getElementById('actionButton').addEventListener('click', function() {
+            document.getElementById('output').textContent = 'Button clicked at: ' + new Date().toLocaleTimeString();
+        });
+    </script>
+</body>
+</html>
